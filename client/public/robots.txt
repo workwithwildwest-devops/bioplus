@@ -1,0 +1,13 @@
+# robots.txt for BIOPLUS Labs
+# Allow all crawlers to access the site
+User-agent: *
+Allow: /
+
+# Block environment and build artifacts if any
+Disallow: /api/
+Disallow: /server
+Disallow: /server.js
+Disallow: /server.prod.js
+
+# Point search engines to the sitemap (add this file if available)
+Sitemap: https://www.biopluslab.com/sitemap.xml
