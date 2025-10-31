@@ -18,8 +18,8 @@ const __dirname = path.dirname(__filename);
 // Middleware
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://www.biopluslab.com', 'https://biopluslab.com'] 
-    : ['http://localhost:4200', 'http://localhost:3000'],
+    ? ['https://www.biopluslab.com', 'https://biopluslab.com','https://bioplus-zeta.vercel.app'] 
+    : ['http://localhost:4200', 'http://localhost:3000','https://bioplus-zeta.vercel.app'],
   credentials: true
 }));
 
