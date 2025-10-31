@@ -1,0 +1,407 @@
+<app-header></app-header>
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-blue-50 to-blue-100 py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+        Transparent <span class="text-blue-600">Pricing</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+        Affordable, transparent pricing for all our laboratory services. No hidden fees, no surprises.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Cards Section -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Choose Your Package</h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Select the package that best fits your health needs
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Basic Package -->
+      <p-card class="pricing-card hover:shadow-xl transition-all duration-300">
+        <ng-template pTemplate="header">
+          <div class="bg-blue-100 p-8 text-center">
+            <h3 class="text-2xl font-bold text-blue-600 mb-2">Basic Health Check</h3>
+            <div class="text-4xl font-bold text-gray-900 mb-2">$89</div>
+            <p class="text-gray-600">Perfect for routine checkups</p>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="content">
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Complete Blood Count (CBC)</span>
+            </li>
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Basic Metabolic Panel</span>
+            </li>
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Lipid Profile</span>
+            </li>
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Urine Analysis</span>
+            </li>
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Thyroid Function Test</span>
+            </li>
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Online Report Access</span>
+            </li>
+          </ul>
+          <p-button 
+            label="Choose Basic" 
+            severity="secondary" 
+            class="w-full"
+            size="large">
+          </p-button>
+        </ng-template>
+      </p-card>
+
+      <!-- Executive Package -->
+      <p-card class="pricing-card hover:shadow-xl transition-all duration-300 border-2 border-blue-500 relative">
+        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+          <span class="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+        </div>
+        <ng-template pTemplate="header">
+          <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-8 text-center text-white">
+            <h3 class="text-2xl font-bold mb-2">Executive Package</h3>
+            <div class="text-4xl font-bold mb-2">$189</div>
+            <p class="text-blue-100">Comprehensive health assessment</p>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="content">
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Everything in Basic Package</span>
+            </li>
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Liver Function Test</span>
+            </li>
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Kidney Function Test</span>
+            </li>
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Vitamin D & B12</span>
+            </li>
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>ECG</span>
+            </li>
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Chest X-Ray</span>
+            </li>
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Doctor Consultation</span>
+            </li>
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Priority Results</span>
+            </li>
+          </ul>
+          <p-button 
+            label="Choose Executive" 
+            severity="success" 
+            class="w-full"
+            size="large">
+          </p-button>
+        </ng-template>
+      </p-card>
+
+      <!-- Premium Package -->
+      <p-card class="pricing-card hover:shadow-xl transition-all duration-300">
+        <ng-template pTemplate="header">
+          <div class="bg-purple-100 p-8 text-center">
+            <h3 class="text-2xl font-bold text-purple-600 mb-2">Premium Package</h3>
+            <div class="text-4xl font-bold text-gray-900 mb-2">$349</div>
+            <p class="text-gray-600">Complete health evaluation</p>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="content">
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Everything in Executive Package</span>
+            </li>
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Cancer Markers</span>
+            </li>
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Cardiac Risk Assessment</span>
+            </li>
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Ultrasound Abdomen</span>
+            </li>
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Stress Test</span>
+            </li>
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Specialist Consultation</span>
+            </li>
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Health Report Analysis</span>
+            </li>
+            <li class="flex items-center">
+              <i class="pi pi-check text-green-500 mr-3"></i>
+              <span>Follow-up Consultation</span>
+            </li>
+          </ul>
+          <p-button 
+            label="Choose Premium" 
+            severity="help" 
+            class="w-full"
+            size="large">
+          </p-button>
+        </ng-template>
+      </p-card>
+    </div>
+  </div>
+</section>
+
+<!-- Individual Tests Section -->
+<section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Individual Test Pricing</h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Need specific tests? Here are our individual test prices
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Blood Tests -->
+      <div class="bg-white rounded-xl p-6 shadow-lg">
+        <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+          <i class="pi pi-heart text-red-500 mr-3"></i>Blood Tests
+        </h3>
+        <div class="space-y-3">
+          <div class="flex justify-between">
+            <span class="text-gray-600">Complete Blood Count</span>
+            <span class="font-semibold">$25</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-600">Lipid Profile</span>
+            <span class="font-semibold">$35</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-600">Thyroid Function</span>
+            <span class="font-semibold">$45</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-600">HbA1c</span>
+            <span class="font-semibold">$30</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-600">Liver Function</span>
+            <span class="font-semibold">$40</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Imaging Tests -->
+      <div class="bg-white rounded-xl p-6 shadow-lg">
+        <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+          <i class="pi pi-image text-blue-500 mr-3"></i>Imaging Tests
+        </h3>
+        <div class="space-y-3">
+          <div class="flex justify-between">
+            <span class="text-gray-600">Chest X-Ray</span>
+            <span class="font-semibold">$50</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-600">Ultrasound Abdomen</span>
+            <span class="font-semibold">$120</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-600">ECG</span>
+            <span class="font-semibold">$35</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-600">CT Scan</span>
+            <span class="font-semibold">$300</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-600">MRI</span>
+            <span class="font-semibold">$500</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Specialized Tests -->
+      <div class="bg-white rounded-xl p-6 shadow-lg">
+        <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+          <i class="pi pi-microscope text-green-500 mr-3"></i>Specialized Tests
+        </h3>
+        <div class="space-y-3">
+          <div class="flex justify-between">
+            <span class="text-gray-600">Cancer Markers</span>
+            <span class="font-semibold">$80</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-600">Vitamin D & B12</span>
+            <span class="font-semibold">$60</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-600">Culture & Sensitivity</span>
+            <span class="font-semibold">$45</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-600">Allergy Testing</span>
+            <span class="font-semibold">$150</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-600">Genetic Testing</span>
+            <span class="font-semibold">$200</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Insurance Section -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Insurance & Payment</h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        We accept most major insurance plans and offer flexible payment options
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Accepted Insurance Plans</h3>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-gray-100 rounded-lg p-4 text-center">
+            <i class="pi pi-shield text-blue-600 text-2xl mb-2"></i>
+            <p class="font-semibold">Blue Cross</p>
+          </div>
+          <div class="bg-gray-100 rounded-lg p-4 text-center">
+            <i class="pi pi-shield text-green-600 text-2xl mb-2"></i>
+            <p class="font-semibold">Aetna</p>
+          </div>
+          <div class="bg-gray-100 rounded-lg p-4 text-center">
+            <i class="pi pi-shield text-purple-600 text-2xl mb-2"></i>
+            <p class="font-semibold">Cigna</p>
+          </div>
+          <div class="bg-gray-100 rounded-lg p-4 text-center">
+            <i class="pi pi-shield text-orange-600 text-2xl mb-2"></i>
+            <p class="font-semibold">UnitedHealth</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Payment Options</h3>
+        <div class="space-y-4">
+          <div class="flex items-center">
+            <i class="pi pi-credit-card text-blue-600 text-xl mr-3"></i>
+            <span class="text-gray-700">Credit/Debit Cards</span>
+          </div>
+          <div class="flex items-center">
+            <i class="pi pi-mobile text-green-600 text-xl mr-3"></i>
+            <span class="text-gray-700">Mobile Payments</span>
+          </div>
+          <div class="flex items-center">
+            <i class="pi pi-bank text-purple-600 text-xl mr-3"></i>
+            <span class="text-gray-700">Bank Transfers</span>
+          </div>
+          <div class="flex items-center">
+            <i class="pi pi-calendar text-orange-600 text-xl mr-3"></i>
+            <span class="text-gray-700">Payment Plans Available</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-r from-blue-600 to-blue-700">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+      Ready to Get Started?
+    </h2>
+    <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+      Book your appointment today and take the first step towards better health with our comprehensive testing services.
+    </p>
+    <p-button 
+      label="Book Appointment" 
+      icon="pi pi-calendar-plus" 
+      severity="success"
+      size="large"
+      class="px-8 py-3 text-lg bg-green-600 hover:bg-green-700">
+    </p-button>
+  </div>
+</section>
+
+<!-- Footer -->
+<!-- <footer class="bg-gray-900 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-2xl font-bold mb-4">
+          <i class="pi pi-heart text-red-500 mr-2"></i>BioPlus
+        </h3>
+        <p class="text-gray-400 mb-4">
+          Your trusted partner in advanced medical diagnostics and laboratory services.
+        </p>
+        <div class="flex space-x-4">
+          <i class="pi pi-facebook text-blue-400 text-xl cursor-pointer hover:text-blue-300"></i>
+          <i class="pi pi-twitter text-blue-400 text-xl cursor-pointer hover:text-blue-300"></i>
+          <i class="pi pi-linkedin text-blue-400 text-xl cursor-pointer hover:text-blue-300"></i>
+          <i class="pi pi-instagram text-pink-400 text-xl cursor-pointer hover:text-pink-300"></i>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a routerLink="/home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+          <li><a routerLink="/about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+          <li><a routerLink="/pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+          <li><a routerLink="/contact" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+        <div class="space-y-2 text-gray-400">
+          <p><i class="pi pi-map-marker mr-2"></i>123 Medical Street, Health City</p>
+          <p><i class="pi pi-phone mr-2"></i>+1 (555) 123-4567</p>
+          <p><i class="pi pi-envelope mr-2"></i>infobioplus.com</p>
+          <p><i class="pi pi-clock mr-2"></i>Mon-Fri: 8AM-6PM</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+      <p>&copy; 2024 BioPlus Laboratory. All rights reserved.</p>
+    </div>
+  </div>
+</footer> -->

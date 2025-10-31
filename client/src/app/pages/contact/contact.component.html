@@ -1,0 +1,314 @@
+<app-header></app-header>
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-blue-50 to-blue-100 py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+        Contact <span class="text-blue-600">Us</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+        Get in touch with our team. We're here to help with all your laboratory needs.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Information Section -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <!-- Contact Form -->
+      <div>
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+        <form (ngSubmit)="onSubmit()" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+                <i class="pi pi-user mr-2 text-blue-600"></i>Full Name *
+              </label>
+              <input id="name" type="text" pInputText [(ngModel)]="contactForm.name" name="name"
+                placeholder="Enter your full name"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                <i class="pi pi-envelope mr-2 text-blue-600"></i>Email Address *
+              </label>
+              <input id="email" type="email" pInputText [(ngModel)]="contactForm.email" name="email"
+                placeholder="Enter your email"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
+                <i class="pi pi-phone mr-2 text-blue-600"></i>Phone Number
+              </label>
+              <input id="phone" type="tel" pInputText [(ngModel)]="contactForm.phone" name="phone"
+                placeholder="Enter your phone number"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+            </div>
+
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">
+                <i class="pi pi-tag mr-2 text-blue-600"></i>Subject
+              </label>
+              <input id="subject" type="text" pInputText [(ngModel)]="contactForm.subject" name="subject"
+                placeholder="Enter subject"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+            </div>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+              <i class="pi pi-comment mr-2 text-blue-600"></i>Message *
+            </label>
+            <textarea id="message" pInputTextarea [(ngModel)]="contactForm.message" name="message"
+              placeholder="Enter your message" rows="6"
+              class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+            </textarea>
+          </div>
+
+          <p-button label="Send Message" icon="pi pi-send" severity="success" type="submit" size="large"
+            class="w-full md:w-auto px-8 py-3">
+          </p-button>
+        </form>
+      </div>
+
+      <!-- Contact Information -->
+      <div>
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+
+        <div class="space-y-8">
+          <!-- Address -->
+          <div class="flex items-start">
+            <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+              <i class="pi pi-map-marker text-blue-600 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Visit Us</h3>
+              <p class="text-gray-600">
+                Site no : 25 & 26 Meena Estate,<br>
+                Sowripalayam Road<br>
+                Coimbatore - 641028
+              </p>
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div class="flex items-start">
+            <div class="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+              <i class="pi pi-phone text-green-600 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Call Us</h3>
+              <p class="text-gray-600">
+                K DHAMU.,B.Sc.,Dip.MLT.,<br>
+                Cell: +91 7418520528<br>
+              </p>
+            </div>
+          </div>
+
+          <!-- Whatsapp -->
+          <div class="flex items-start">
+            <div class="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+              <i class="pi pi-whatsapp text-green-600 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">WhatsApp Us</h3>
+              <p class="text-gray-600">
+                <a href="https://wa.me/916382703823" target="_blank" class="text-green-600 hover:text-green-800"
+                  style="text-decoration: none;">+91 6382703823</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="flex items-start">
+            <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+              <i class="pi pi-envelope text-purple-600 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>
+              <p class="text-gray-600">
+                <i class="pi pi-envelope text-purple-600 text-xl pr-3"></i>
+                <a href="mailto:biopluslaboratory2019@gmail.com">biopluslaboratory2019&#64;gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Hours -->
+          <div class="flex items-start">
+            <div class="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+              <i class="pi pi-clock text-orange-600 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Working Hours</h3>
+              <p class="text-gray-600">
+                Monday - Friday: 8:00 AM - 6:00 PM<br>
+                Saturday: 9:00 AM - 4:00 PM<br>
+                Sunday: Emergency Only<br>
+                24/7 Emergency Services Available
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">Find Us on Map</h3>
+          <div class="rounded-lg overflow-hidden">
+            <iframe
+              class="w-full h-64 md:h-96"
+              src="https://www.google.com/maps?q=11.00667,76.997261&z=15&output=embed"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Find answers to common questions about our services
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-8">
+      <div class="bg-white rounded-xl p-6 shadow-lg">
+        <h3 class="text-lg font-semibold text-gray-900 mb-3">
+          <i class="pi pi-question-circle text-blue-600 mr-2"></i>
+          How long does it take to get results?
+        </h3>
+        <p class="text-gray-600">
+          Most routine tests are completed within 24-48 hours. Complex tests may take 3-5 business days.
+          We offer express services for urgent cases.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-lg">
+        <h3 class="text-lg font-semibold text-gray-900 mb-3">
+          <i class="pi pi-question-circle text-green-600 mr-2"></i>
+          Do I need an appointment?
+        </h3>
+        <p class="text-gray-600">
+          While walk-ins are welcome, we recommend booking an appointment to ensure minimal wait times
+          and better service.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-lg">
+        <h3 class="text-lg font-semibold text-gray-900 mb-3">
+          <i class="pi pi-question-circle text-purple-600 mr-2"></i>
+          What should I bring to my appointment?
+        </h3>
+        <p class="text-gray-600">
+          Please bring a valid ID, insurance card (if applicable), doctor's prescription,
+          and any previous test results.
+        </p>
+      </div>
+
+      <!-- <div class="bg-white rounded-xl p-6 shadow-lg">
+        <h3 class="text-lg font-semibold text-gray-900 mb-3">
+          <i class="pi pi-question-circle text-orange-600 mr-2"></i>
+          How can I access my results online?
+        </h3>
+        <p class="text-gray-600">
+          You can access your results through our secure patient portal using your unique
+          login credentials provided during registration.
+        </p>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-r from-blue-600 to-blue-700">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+      Need Immediate Assistance?
+    </h2>
+    <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+      For urgent medical needs or emergency services, call our 24/7 emergency hotline.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a pButton label="Emergency Hotline" icon="pi pi-phone" severity="danger" href="tel:7418520528"></a>
+        <!-- <a pButton label="Book Appointment" icon="pi pi-calendar-plus" severity="success"></a> -->
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-2xl font-bold mb-4">
+          <i class="pi pi-heart text-red-500 mr-2"></i>BioPlus
+        </h3>
+        <p class="text-gray-400 mb-4">
+          Your trusted partner in advanced medical diagnostics and laboratory services.
+        </p>
+        <div class="flex space-x-4">
+          <a href="https://wa.me/916382703823" target="_blank"
+            class="text-green-600 cursor-pointer hover:text-green-800" style="text-decoration: none;"><i
+              class="pi pi-whatsapp text-green-600 text-xl"></i></a>
+          <a href="" target="_blank" class="text-green-600 cursor-pointer hover:text-green-800"
+            style="text-decoration: none;"><i
+              class="pi pi-facebook text-blue-400 text-xl cursor-pointer hover:text-blue-300"></i></a>
+          <a href="" target="_blank" class="text-green-600 cursor-pointer hover:text-green-800"
+            style="text-decoration: none;"><i
+              class="pi pi-twitter text-blue-400 text-xl cursor-pointer hover:text-blue-300"></i></a>
+          <a href="" target="_blank" class="text-green-600 cursor-pointer hover:text-green-800"
+            style="text-decoration: none;"><i
+              class="pi pi-linkedin text-blue-400 text-xl cursor-pointer hover:text-blue-300"></i></a>
+          <a href="" target="_blank" class="text-green-600 cursor-pointer hover:text-green-800"
+            style="text-decoration: none;"><i
+              class="pi pi-instagram text-pink-400 text-xl cursor-pointer hover:text-pink-300"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a routerLink="/home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+          <li><a routerLink="/about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+          <!-- <li><a routerLink="/pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li> -->
+          <li><a routerLink="/contact" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+        <div class="space-y-2 text-gray-400">
+          <p><i class="pi pi-map-marker mr-2"></i>site no : 25 & 26 Meena Estate, sowripalayam Road
+            Coimbatore - 641028 </p>
+
+          <p><i class="pi pi-phone mr-2"></i>K DHAMU.,B.Sc.,Dip.MLT.,<br>
+            Cell: +91 7418520528</p>
+          <!-- <p><i class="pi pi-envelope mr-2"></i>info@bioplus.com</p> -->
+          <p><i class="pi pi-clock mr-2"></i>Mon-Fri: 8AM-6PM</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+      <p>&copy; 2025 BioPlus Laboratory. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<p-toast></p-toast>

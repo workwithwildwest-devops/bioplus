@@ -1,0 +1,73 @@
+/* Appointment Dialog Styles */
+.appointment-dialog .p-dialog-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 8px 8px 0 0;
+}
+
+.appointment-dialog .p-dialog-header .p-dialog-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.p-inputtext:focus,
+.p-dropdown:focus,
+.p-calendar:focus {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+  border-color: #3b82f6;
+}
+
+.p-fileupload-basic {
+  width: 100%;
+}
+
+.p-fileupload-basic .p-button {
+  width: 100%;
+  background: #f3f4f6;
+  border: 2px dashed #d1d5db;
+  color: #6b7280;
+  transition: all 0.2s;
+}
+
+.p-fileupload-basic .p-button:hover {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+.p-calendar .p-inputtext {
+  width: 100%;
+}
+
+.p-dropdown {
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .appointment-dialog {
+    margin: 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .flex.justify-end.space-x-3 {
+    flex-direction: column;
+    space-y: 0.75rem;
+  }
+  
+  .flex.justify-end.space-x-3 > * {
+    width: 100%;
+  }
+}

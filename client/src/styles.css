@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss-primeui";
+@import "tailwindcss";
+@import "primeicons/primeicons.css";
+
+/* ===== CONSISTENT COLOR SCHEME ===== */
+:root {
+  --primary-blue: #3b82f6;
+  --primary-blue-light: #60a5fa;
+  --primary-blue-dark: #1d4ed8;
+  --secondary-green: #10b981;
+  --secondary-green-light: #34d399;
+  --secondary-green-dark: #059669;
+  --accent-purple: #8b5cf6;
+  --accent-purple-light: #a78bfa;
+  --accent-purple-dark: #7c3aed;
+  --neutral-gray: #6b7280;
+  --neutral-gray-light: #9ca3af;
+  --neutral-gray-dark: #374151;
+  --background-white: #ffffff;
+  --background-gray: #f9fafb;
+  --background-blue: #eff6ff;
+}
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--neutral-gray-dark);
+  background-color: var(--background-white);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar with consistent colors */
+/* ::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-gray);
+} */
+
+/* ::-webkit-scrollbar-thumb {
+  background: var(--primary-blue);
+  border-radius: 4px;
+} */
+
+/* ::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-blue-dark);
+} */
+
+/* PrimeNG Button Consistency */
+.p-button {
+  transition: all 0.2s ease;
+}
+
+.p-button:hover {
+  transform: translateY(-1px);
+}
+
+/* Consistent focus styles */
+.p-inputtext:focus,
+.p-inputtextarea:focus,
+.p-dropdown:focus,
+.p-calendar:focus {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+  border-color: var(--primary-blue);
+}

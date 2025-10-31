@@ -1,0 +1,25 @@
+<div class="carousel-container">
+  <p-carousel 
+    [value]="images" 
+    [numVisible]="3" 
+    [numScroll]="1" 
+    [responsiveOptions]="responsiveOptions"
+    [circular]="true"
+    [autoplayInterval]="4000"
+    class="custom-carousel">
+    
+    <ng-template let-image pTemplate="item">
+      <div class="carousel-item">
+        <div class="image-container">
+          <img [src]="image.src" [alt]="image.alt" class="carousel-image">
+          <div class="image-overlay">
+            <div class="overlay-content">
+              <h3 class="image-title">{{ image.title }}</h3>
+              <p class="image-description">{{ image.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>

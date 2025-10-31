@@ -1,0 +1,181 @@
+<p-dialog header="Book an Appointment" [(visible)]="visible" (onHide)="onVisibleChange(false)" [modal]="true"
+  [style]="{ width: '90vw', maxWidth: '600px' }" [draggable]="false" [resizable]="false" class="appointment-dialog">
+
+  <div class="p-4">
+    <form (ngSubmit)="onSubmit()" class="space-y-6">
+      <!-- Name Field -->
+      <div class="form-group">
+        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+          <i class="pi pi-user mr-2 text-blue-600"></i>Name *
+        </label>
+        <input id="name" type="text" pInputText [(ngModel)]="appointmentForm.name" name="name"
+          placeholder="Enter your full name"
+          class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+      </div>
+
+      <!-- Contact Number Field -->
+      <div class="form-group">
+        <label for="contact" class="block text-sm font-medium text-gray-700 mb-2">
+          <i class="pi pi-phone mr-2 text-blue-600"></i>Contact Number *
+        </label>
+        <input id="contact" type="tel" pInputText [(ngModel)]="appointmentForm.contactNumber" name="contactNumber"
+          placeholder="Enter your contact number"
+          class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+      </div>
+
+      <!-- Email Field -->
+      <div class="form-group">
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+          <i class="pi pi-envelope mr-2 text-blue-600"></i>Mail ID *
+        </label>
+        <input id="email" type="email" pInputText [(ngModel)]="appointmentForm.email" name="email"
+          placeholder="Enter your email address"
+          class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+      </div>
+
+      <!-- Address Field -->
+      <div class="form-group">
+        <label for="address" class="block text-sm font-medium text-gray-700 mb-2">
+          <i class="pi pi-map-marker mr-2 text-blue-600"></i>Address *
+        </label>
+        <textarea id="address" pInputText [(ngModel)]="appointmentForm.address" name="address"
+          placeholder="Enter your address" rows="3" maxlength="500"
+          class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none">
+            </textarea>
+        <small class="text-gray-500 mt-1 block">
+          <i class="pi pi-info-circle mr-1"></i>
+          {{ appointmentForm.address.length || 0 }}/500 characters
+        </small>
+      </div>
+
+      <!-- Services Dropdown -->
+      <div class="form-group">
+        <label for="service" class="block text-sm font-medium text-gray-700 mb-2">
+          <i class="pi pi-briefcase mr-2 text-blue-600"></i>Services Needed *
+        </label>
+        <p-dropdown id="service" [(ngModel)]="appointmentForm.service" name="service" [options]="services"
+          placeholder="Select a service" optionLabel="label" optionValue="value" class="w-full"
+          [style]="{ width: '100%' }">
+        </p-dropdown>
+      </div>
+
+      <!-- Comment Field -->
+      <div class="form-group">
+        <label for="comment" class="block text-sm font-medium text-gray-700 mb-2">
+          <i class="pi pi-comment mr-2 text-blue-600"></i> Test Details
+        </label>
+        <textarea id="comment" pInputText [(ngModel)]="appointmentForm.comment" name="comment"
+          placeholder="Enter the test details (max 500 characters)" rows="3" maxlength="500"
+          class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none">
+          </textarea>
+        <small class="text-gray-500 mt-1 block">
+          <i class="pi pi-info-circle mr-1"></i>
+          {{ appointmentForm.comment.length || 0 }}/500 characters
+        </small>
+      </div>
+
+      <!-- Date and Time Field -->
+      <div class="form-group">
+        <label for="datetime" class="block text-sm font-medium text-gray-700 mb-2">
+          <i class="pi pi-calendar mr-2 text-blue-600"></i>Appointment Date & Time *
+        </label>
+        <p-calendar id="datetime" [(ngModel)]="appointmentForm.dateTime" name="dateTime" [minDate]="minDate"
+          [maxDate]="maxDate" [showTime]="true" [hourFormat]="'12'" placeholder="Select date and time" class="w-full"
+          [style]="{ width: '100%' }">
+        </p-calendar>
+      </div>
+
+
+
+      <!-- Upload Prescription -->
+      <div class="form-group">
+        <label class="block text-sm font-medium text-gray-700 mb-2">
+          <i class="pi pi-upload mr-2 text-blue-600"></i>Upload Prescription/Documents
+        </label>
+        <p-toast />
+        <p-fileupload name="files" [multiple]="true" accept="image/*,.pdf,.doc,.docx,.txt" maxFileSize="5000000"
+          (onSelect)="onSelectedFiles($event)">
+          <ng-template #header let-files let-chooseCallback="chooseCallback" let-clearCallback="clearCallback"
+            let-uploadCallback="uploadCallback">
+            <div class="flex flex-wrap justify-between items-center flex-1 gap-4">
+              <div class="flex gap-2">
+                <p-button (onClick)="choose($event, chooseCallback)" icon="pi pi-images" [rounded]="true"
+                  [outlined]="true" />
+                <p-button (onClick)="uploadEvent(uploadCallback)" icon="pi pi-cloud-upload" [rounded]="true"
+                  [outlined]="true" severity="success" [disabled]="!files || files.length === 0" />
+                <p-button (onClick)="clearCallback()" icon="pi pi-times" [rounded]="true" [outlined]="true"
+                  severity="danger" [disabled]="!files || files.length === 0" />
+              </div>
+              <p-progressbar [value]="totalSizePercent" [showValue]="false" class="w-full"
+                styleClass="md:w-20rem h-1 w-full md:ml-auto">
+                <span class="whitespace-nowrap">{{ totalSize }}B / 5Mb</span>
+              </p-progressbar>
+            </div>
+          </ng-template>
+          <ng-template #content let-files let-uploadedFiles="uploadedFiles" let-removeFileCallback="removeFileCallback"
+            let-removeUploadedFileCallback="removeUploadedFileCallback">
+            <div class="flex flex-col gap-8 pt-4">
+              <div *ngIf="files?.length > 0">
+                <h5>Pending</h5>
+                <div class="flex flex-wrap gap-4 justify-center">
+                  <div *ngFor="let file of files; let i = index"
+                    class="p-8 rounded-border flex flex-col border border-surface items-center gap-4">
+                    <div>
+                      <img role="presentation" [alt]="file.name" [src]="file.objectURL" width="100" height="50" />
+                    </div>
+                    <span class="font-semibold text-ellipsis max-w-60 whitespace-nowrap overflow-hidden">{{ file.name
+                      }}</span>
+                    <div>{{ formatSize(file.size) }}</div>
+                    <p-badge value="Pending" severity="warn" />
+                    <p-button icon="pi pi-times"
+                      (click)="onRemoveTemplatingFile($event, file, removeFileCallback, index)" [outlined]="true"
+                      [rounded]="true" severity="danger" />
+                  </div>
+                </div>
+              </div>
+              <div *ngIf="uploadedFiles?.length > 0">
+                <h5>Completed</h5>
+                <div class="flex flex-wrap gap-4 justify-center">
+                  <div *ngFor="let file of uploadedFiles; let i = index"
+                    class="card m-0 px-12 flex flex-col border border-surface items-center gap-4">
+                    <div>
+                      <img role="presentation" [alt]="file.name" [src]="file.objectURL" width="100" height="50" />
+                    </div>
+                    <span class="font-semibold text-ellipsis max-w-60 whitespace-nowrap overflow-hidden">{{ file.name
+                      }}</span>
+                    <div>{{ formatSize(file.size) }}</div>
+                    <p-badge value="Completed" class="mt-4" severity="success" />
+                    <p-button icon="pi pi-times" (onClick)="removeUploadedFileCallback(index)" [outlined]="true"
+                      [rounded]="true" severity="danger" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template #file></ng-template>
+          <ng-template #empty>
+            <div class="flex items-center justify-center flex-col">
+              <i class="pi pi-cloud-upload !border-2 !rounded-full !p-8 !text-4xl !text-muted-color"></i>
+              <p class="mt-6 mb-0">Drag and drop files to here to upload.</p>
+            </div>
+          </ng-template>
+        </p-fileupload>
+        <small class="text-gray-500 mt-1 block">
+          <i class="pi pi-info-circle mr-1"></i>
+          Supported formats: JPG, PNG, PDF, DOC, DOCX, TXT (Max size: 5MB per file, Max 3 files)
+        </small>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex justify-end pt-4 gap-4">
+        <p-button label="Cancel" severity="secondary" (onClick)="onVisibleChange(false)">
+        </p-button>
+        <p-button label="Book Appointment" severity="success" type="submit" icon="pi pi-check" [loading]="isLoading"
+          [disabled]="isLoading">
+        </p-button>
+      </div>
+    </form>
+  </div>
+</p-dialog>
+
+<p-toast></p-toast>

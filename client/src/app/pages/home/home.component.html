@@ -1,0 +1,510 @@
+<app-header></app-header>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center py-20">
+      <h1 class="hero-title text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+        Providing Accurate, Reliable and Fast
+      </h1>
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-8 animate-slide-up">
+        Laboratory Service
+      </h2>
+      <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto animate-slide-up">
+        At <strong>BioPlus Laboratory</strong>, we ensure precision in every test, delivering dependable results with
+        speed.
+        Our advanced technology and expert team guarantee trustworthy diagnostics for your health and well-being.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center animate-bounce-in">
+        <!-- <p-button (onClick)="openAppointmentDialog()" label="Book A Lab Visit" icon="pi pi-calendar-plus" severity="secondary" size="large">
+        </p-button> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Packages Section -->
+<section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Our Premium Care Packages
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Experience personalized, comprehensive health testing with our premium care packages, designed for the highest
+        level of accuracy and service.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Basic Package -->
+      <div
+        class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow flex flex-col items-center justify-between">
+        <div class="text-center mb-6">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">BASIC</h3>
+          <h4 class="text-xl font-semibold text-gray-800 mb-4">BioPlus BASIC HEALTH PACKAGE (70 Tests)</h4>
+          <p class="text-gray-600 text-sm mb-4">BioPlus provide best basic health package to an individual</p>
+          <!-- <div class="text-3xl font-bold text-blue-600 mb-2">₹1500</div>
+          <div class="text-gray-500">/ PER PERSON</div> -->
+        </div>
+        <ul class="text-sm text-gray-600 space-y-2 mb-6">
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Complete Blood Count (CBC) - 14</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Blood Glucose - Fasting (FBS) - 1</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Glycosylated Hemoglobin - HbA1c - 3</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Renal Function Test (RFT) - 7</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Lipid Profile - 9</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Iron profile - 4</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Thyroid Function Test - 3</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Liver Function Test (LFT) - 11</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Urine Complete Analysis - 18</li>
+        </ul>
+        <p-button label="Make Appointment" severity="success" styleClass="w-full"
+          (onClick)="showAppointmentDialog = true" (visibleChange)="showAppointmentDialog = $event"></p-button>
+        <!-- <p class="text-xs text-gray-500 mt-2">*The charges are subject to change according to special situation</p> -->
+      </div>
+
+      <!-- Advance Package -->
+      <div
+        class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow border-2 border-blue-500 relative flex flex-col items-center justify-between">
+        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+          <span class="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">MOST POPULAR</span>
+        </div>
+        <div class="text-center mb-6">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">ADVANCE</h3>
+          <h4 class="text-xl font-semibold text-gray-800 mb-4">BioPlus ADVANCE HEALTH PACKAGE (77 Tests)</h4>
+          <p class="text-gray-600 text-sm mb-4">BioPlus provide best advance health package with 77 test to an
+            individual</p>
+          <!-- <div class="text-3xl font-bold text-blue-600 mb-2">₹2000</div>
+          <div class="text-gray-500">/ PER PERSON</div> -->
+        </div>
+        <ul class="text-sm text-gray-600 space-y-2 mb-6">
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Complete Blood Count (CBC) - 14</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Blood Glucose - Fasting (FBS) - 1</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Glycosylated Hemoglobin - HbA1c - 3</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Renal Function Test (RFT) - 7</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Lipid Profile - 9</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Iron profile - 4</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Thyroid Function Test - 3</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Liver Function Test (LFT) - 11</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Electrolytes-2</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Urinary microalbumin- 3</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Blood Ketone (D3HB) - 1</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Fructosamin - 1</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Urine Complete Analysis - 18</li>
+        </ul>
+        <p-button label="Make Appointment" severity="success" styleClass="w-full"
+          (onClick)="showAppointmentDialog = true" (visibleChange)="showAppointmentDialog = $event"></p-button>
+        <!-- <p class="text-xs text-gray-500 mt-2">*The charges are subject to change according to special situation</p> -->
+      </div>
+
+      <!-- Advance Package 1 -->
+      <div
+        class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow flex flex-col items-center justify-between">
+        <div class="text-center mb-6">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">ADVANCE - 1</h3>
+          <h4 class="text-xl font-semibold text-gray-800 mb-4">BioPlus ADVANCE HEALTH PACKAGE - 1 (80 Tests)</h4>
+          <p class="text-gray-600 text-sm mb-4">BioPlus provides best advance health package 1 with 80 test to an
+            individual</p>
+          <!-- <div class="text-3xl font-bold text-blue-600 mb-2">₹2600</div>
+          <div class="text-gray-500">/ PER PERSON</div> -->
+        </div>
+        <ul class="text-sm text-gray-600 space-y-2 mb-6">
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Complete Blood Count (CBC) - 14</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Blood Glucose - Fasting (FBS) - 1</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Glycosylated Hemoglobin - HbA1c - 3</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Renal Function Test (RFT) - 7</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Lipid Profile - 9</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Iron profile - 4</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Thyroid Function Test - 3</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Liver Function Test (LFT) - 11</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Electrolytes-2</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Testosterone - Total - 1</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Cardiac Risk Markers - 5</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Vitamins(Vitamin - D & Vitamin B12) - 2</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Homocysteine - 1</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Urine Complete Analysis - 18</li>
+        </ul>
+        <p-button label="Make Appointment" severity="success" styleClass="w-full"
+          (onClick)="showAppointmentDialog = true" (visibleChange)="showAppointmentDialog = $event"></p-button>
+        <!-- <p class="text-xs text-gray-500 mt-2">*The charges are subject to change according to special situation</p> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Our amazing Services
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        At <strong>BioPlus Laboratory</strong>, we offer a wide range of cutting-edge diagnostic and health screening
+        services designed for accuracy, reliability, and efficiency.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Clinical Histopathology Tests -->
+      <!-- <div class="service-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+        <div class="text-center mb-4">
+          <img 
+            src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+            alt="Microscope and laboratory equipment"
+            class="w-full h-32 object-cover rounded-lg mb-4"
+            (error)="onImageError($event)">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Clinical Histopathology Tests</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Lab testing can be a very effective way to understand what's happening…
+          </p>
+        </div>
+        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Complete Blood Count</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Upload Prescription</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Series Blood Tests</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Hormone Shots</li>
+        </ul>
+        <p-button label="Book Now" severity="success" styleClass="w-full"></p-button>
+      </div> -->
+
+      <!-- Clinical Biochemistry Tests -->
+      <div class="service-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+        <div class="text-center mb-4">
+          <img src="/images/jpg/clinical-biochemistry.jpg" alt="Laboratory test tubes and equipment"
+            class="w-full h-32 object-cover rounded-lg mb-4" (error)="onImageError($event)">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Clinical Biochemistry Tests</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Lab testing can be a very effective way to understand what's happening…
+          </p>
+        </div>
+        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Series Blood Tests</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Complete Blood Count</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Upload Prescription</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Hormone Shots</li>
+        </ul>
+        <p-button label="Book Now" severity="success" styleClass="w-full"></p-button>
+      </div>
+
+      <!-- Vaccine Research Center -->
+      <!-- <div class="service-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+        <div class="text-center mb-4">
+          <img 
+            src="https://images.unsplash.com/photo-1584362917165-526a968579e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+            alt="Vaccine research laboratory"
+            class="w-full h-32 object-cover rounded-lg mb-4"
+            (error)="onImageError($event)">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Vaccine Research Center</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Lab testing can be a very effective way to understand what's happening…
+          </p>
+        </div>
+        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Complete Blood Count</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Hormone Shots</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Series Blood Tests</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Upload Prescription</li>
+        </ul>
+        <p-button label="Book Now" severity="success" styleClass="w-full"></p-button>
+      </div> -->
+
+      <!-- Clinical Microbiology Tests -->
+      <div class="service-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+        <div class="text-center mb-4">
+          <img src="/images/jpg/cm.jpg" alt="Microbiology laboratory equipment"
+            class="w-full h-32 object-cover rounded-lg mb-4" (error)="onImageError($event)">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Clinical Microbiology Tests</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Lab testing can be a very effective way to understand what's happening…
+          </p>
+        </div>
+        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Series Blood Tests</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Hormone Shots</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Upload Prescription</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Complete Blood Count</li>
+        </ul>
+        <p-button label="Book Now" severity="success" styleClass="w-full"></p-button>
+      </div>
+
+      <!-- Complete Health Checkup -->
+      <div class="service-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+        <div class="text-center mb-4">
+          <img src="/images/jpg/complete.jpg" alt="Health checkup and medical examination"
+            class="w-full h-32 object-cover rounded-lg mb-4" (error)="onImageError($event)">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Complete Health Checkup</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Once collected, samples will be sent to labs for processing. Detailed reports…
+          </p>
+        </div>
+        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Complete Blood Count</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Upload Prescription</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Series Blood Tests</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Hormone Shots</li>
+        </ul>
+        <p-button label="Book Now" severity="success" styleClass="w-full"></p-button>
+      </div>
+
+      <!-- Allergy & Sensitivity Testing -->
+      <div class="service-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+        <div class="text-center mb-4">
+          <img
+            src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+            alt="Allergy testing and sensitivity analysis" class="w-full h-32 object-cover rounded-lg mb-4"
+            (error)="onImageError($event)">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Allergy & Sensitivity Testing</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            At-home food sensitivity tests, specifically IgG tests, do not reliably identify triggers…
+          </p>
+        </div>
+        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Complete Blood Count</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Series Blood Tests</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Upload Prescription</li>
+          <li><i class="pi pi-check text-green-500 mr-2"></i>Hormone Shots</li>
+        </ul>
+        <p-button label="Book Now" severity="success" styleClass="w-full"></p-button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Client Testimonials Section -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Clients Testimonial
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Testimonial 1 -->
+      <div class="bg-gray-50 rounded-lg p-6">
+        <div class="flex items-center mb-4">
+          <div class="flex text-yellow-400">
+            <i class="pi pi-star-fill"></i>
+            <i class="pi pi-star-fill"></i>
+            <i class="pi pi-star-fill"></i>
+            <i class="pi pi-star-fill"></i>
+            <i class="pi pi-star-fill"></i>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4">
+          Amazing experience with this laboratory. The service has been exceptional and the reports are delivered on
+          time! Definitely recommended them for rtpcr and other blood tests!
+        </p>
+        <div class="font-semibold text-gray-900">R J SaiKannan</div>
+        <div class="text-gray-600">Coimbatore</div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="bg-gray-50 rounded-lg p-6">
+        <div class="flex items-center mb-4">
+          <div class="flex text-yellow-400">
+            <i class="pi pi-star-fill"></i>
+            <i class="pi pi-star-fill"></i>
+            <i class="pi pi-star-fill"></i>
+            <i class="pi pi-star-fill"></i>
+            <i class="pi pi-star-fill"></i>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4">
+          One of the best lab and good approach and result also prefect tym to distribute and iam glad to see result 😅
+          and timeing also good lab and good type of workers go ahead ❤️
+        </p>
+        <div class="font-semibold text-gray-900">SANTHOSH M M</div>
+        <div class="text-gray-600">Coimbatore</div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="bg-gray-50 rounded-lg p-6">
+        <div class="flex items-center mb-4">
+          <div class="flex text-yellow-400">
+            <i class="pi pi-star-fill"></i>
+            <i class="pi pi-star-fill"></i>
+            <i class="pi pi-star-fill"></i>
+            <i class="pi pi-star-fill"></i>
+            <i class="pi pi-star-fill"></i>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-4">
+          Very satisfied and happy for your laboratory service,good responsible
+        </p>
+        <div class="font-semibold text-gray-900">Mk Krishna</div>
+        <div class="text-gray-600">Coimbatore</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Why Choose BioPlus
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        At <strong>BioPlus Laboratory</strong>, we provide cutting-edge diagnostic solutions with a commitment to
+        accuracy, reliability, and fast results.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Haematology -->
+      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+        <div class="text-center mb-4">
+          <img src="/images/jpg/hematology.jpg" alt="Hematology laboratory equipment"
+            class="w-full h-28 object-cover rounded-lg mb-4" (error)="onImageError($event)">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">HAEMATOLOGY</h3>
+        </div>
+        <p class="text-gray-600 text-sm">
+          Our hematology services provide precise analysis of blood conditions, helping in the diagnosis and monitoring
+          of various disorders. Using advanced technology, we ensure accurate results for conditions such as anemia,
+          infections, and blood cancers.
+        </p>
+      </div>
+
+      <!-- Bio-Chemistry -->
+      <!-- <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+        <div class="text-center mb-4">
+          <img
+            src="/images/jpg/biochemistry.jpg"
+            alt="Biochemistry laboratory analysis" class="w-full h-28 object-cover rounded-lg mb-4"
+            (error)="onImageError($event)">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">BIO - CHEMISTRY</h3>
+        </div>
+        <p class="text-gray-600 text-sm">
+          Our biochemistry services offer comprehensive testing to analyze your body's chemical processes, including
+          metabolic functions, enzyme activity, and hormone levels. We provide accurate results to support the diagnosis
+          of conditions like diabetes, liver disorders, and kidney function abnormalities.
+        </p>
+      </div> -->
+
+      <!-- Microbiology -->
+      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+        <div class="text-center mb-4">
+          <img src="/images/jpg/microbiology.jpg" alt="Microbiology testing equipment"
+            class="w-full h-28 object-cover rounded-lg mb-4" (error)="onImageError($event)">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">MICROBIOLOGY</h3>
+        </div>
+        <p class="text-gray-600 text-sm">
+          Our microbiology services specialize in identifying pathogens and microorganisms that cause infections, from
+          bacteria to fungi and viruses. With advanced testing methods, we help diagnose a wide range of infectious
+          diseases and guide effective treatment options.
+        </p>
+      </div>
+
+      <!-- Clinical Pathology -->
+      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+        <div class="text-center mb-4">
+          <img src="/images/jpg/clinical.jpg" alt="Clinical pathology laboratory"
+            class="w-full h-28 object-cover rounded-lg mb-4" (error)="onImageError($event)">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Clinical Pathology</h3>
+        </div>
+        <p class="text-gray-600 text-sm">
+          Our clinical pathology services offer detailed analysis of bodily fluids, such as blood and urine, to diagnose
+          and monitor various health conditions. With advanced techniques and expert interpretation, we provide crucial
+          insights for the detection of diseases and ongoing patient care.
+        </p>
+      </div>
+
+      <!-- Histopathology -->
+      <!-- <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+        <div class="text-center mb-4">
+          <img
+            src="https://images.unsplash.com/photo-1584362917165-526a968579e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+            alt="Histopathology tissue analysis" class="w-full h-28 object-cover rounded-lg mb-4"
+            (error)="onImageError($event)">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Histopathology</h3>
+        </div>
+        <p class="text-gray-600 text-sm">
+          Our histopathology services involve the examination of tissue samples under a microscope to diagnose diseases
+          such as cancer, infections, and autoimmune disorders. Using advanced staining techniques, we provide precise
+          tissue analysis to guide accurate diagnosis and treatment plans.
+        </p>
+      </div> -->
+
+      <!-- Specialized Genetic Testing -->
+      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+        <div class="text-center mb-4">
+          <img
+            src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+            alt="Genetic testing laboratory" class="w-full h-28 object-cover rounded-lg mb-4"
+            (error)="onImageError($event)">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Specialized Genetic Testing</h3>
+        </div>
+        <p class="text-gray-600 text-sm">
+          Our staff of trained Phlebotomists are experienced in performing blood draws and specialized genetic testing
+          to provide comprehensive health insights and personalized treatment recommendations.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-2xl font-bold mb-4">
+          <i class="pi pi-heart text-red-500 mr-2"></i>BioPlus
+        </h3>
+        <p class="text-gray-400 mb-4">
+          Your trusted partner in advanced medical diagnostics and laboratory services.
+        </p>
+        <div class="flex space-x-4">
+          <a href="https://wa.me/916382703823" target="_blank"
+            class="text-green-600 cursor-pointer hover:text-green-800" style="text-decoration: none;"><i
+              class="pi pi-whatsapp text-green-600 text-xl"></i></a>
+          <a href="" target="_blank" class="text-green-600 cursor-pointer hover:text-green-800"
+            style="text-decoration: none;"><i
+              class="pi pi-facebook text-blue-400 text-xl cursor-pointer hover:text-blue-300"></i></a>
+          <a href="" target="_blank" class="text-green-600 cursor-pointer hover:text-green-800"
+            style="text-decoration: none;"><i
+              class="pi pi-twitter text-blue-400 text-xl cursor-pointer hover:text-blue-300"></i></a>
+          <a href="" target="_blank" class="text-green-600 cursor-pointer hover:text-green-800"
+            style="text-decoration: none;"><i
+              class="pi pi-linkedin text-blue-400 text-xl cursor-pointer hover:text-blue-300"></i></a>
+          <a href="" target="_blank" class="text-green-600 cursor-pointer hover:text-green-800"
+            style="text-decoration: none;"><i
+              class="pi pi-instagram text-pink-400 text-xl cursor-pointer hover:text-pink-300"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a routerLink="/home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+          <li><a routerLink="/about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+          <!-- <li><a routerLink="/pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li> -->
+          <li><a routerLink="/contact" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+        <div class="space-y-2 text-gray-400">
+          <p><i class="pi pi-map-marker mr-2"></i>site no : 25 & 26 Meena Estate, sowripalayam Road
+            Coimbatore - 641028 </p>
+
+          <p><i class="pi pi-phone mr-2"></i>K DHAMU.,B.Sc.,Dip.MLT.,<br>
+            Cell: +91 7418520528</p>
+          <!-- <p><i class="pi pi-envelope mr-2"></i>info@bioplus.com</p> -->
+          <p><i class="pi pi-clock mr-2"></i>Mon-Fri: 8AM-6PM</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+      <p>&copy; 2025 BioPlus Laboratory. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<app-appointment-dialog [visible]="showAppointmentDialog" (visibleChange)="showAppointmentDialog = $event">
+</app-appointment-dialog>
